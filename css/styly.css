@@ -1,0 +1,215 @@
+/* ============================================
+   Pekárna Stodola - Vlastní styly
+   Fonty: Kumar One, Open Sans
+   Barvy: #E0842F, #FFFFFF, #000000
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* ---- Globální styly ---- */
+:root {
+  --orange: #E0842F;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Kumar One', cursive;
+}
+
+/* ---- Navigace ---- */
+.navbar {
+  background-color: transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  color: var(--black) !important;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--black) !important;
+  padding: 0.4rem 0.85rem !important;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--orange) !important;
+}
+
+/* ---- Hero / Banner sekce ---- */
+.hero-section {
+  position: relative;
+  background-image: url('../img/banner.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: var(--white);
+  line-height: 1.15;
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ---- Tlačítka ---- */
+.btn-orange {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.65rem 1.6rem;
+  border-radius: 0;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-orange:hover {
+  background-color: #c86e1a;
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* ---- Naše nabídka sekce ---- */
+.nabidka-section {
+  padding: 60px 0 50px;
+}
+
+.nabidka-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.92rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+/* ---- Kde nás najdete sekce ---- */
+.kontakt-section {
+  padding: 50px 0 60px;
+}
+
+.kontakt-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.kontakt-section img.map-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.kontakt-text h4 {
+  font-family: 'Kumar One', cursive;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.kontakt-text p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.kontakt-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+
+.kontakt-icon-row img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.kontakt-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ---- Footer ---- */
+footer {
+  background-color: var(--white);
+  border-top: 1px solid #eee;
+  padding: 1.2rem 0;
+  font-size: 0.82rem;
+  color: #555;
+  text-align: center;
+}
+
+/* ---- Responzivita ---- */
+@media (max-width: 767.98px) {
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .nabidka-section h2,
+  .kontakt-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .product-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .kontakt-text {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+}
